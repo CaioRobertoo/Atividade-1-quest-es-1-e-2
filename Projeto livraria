@@ -1,0 +1,45 @@
+public class Projetolivraria {
+    public static void main(String[] args) {
+       
+        Livro livro1 = new Livro();
+        Livro livro2 = new Livro();
+
+        
+        livro1.titulo = "Harry Potter";
+        livro1.autor = "J. K. Rowling";
+        livro1.preco = 150.00;
+
+        livro2.titulo = "Dom Casmurro";
+        livro2.autor = "Machado de Assis";
+        livro2.preco = 100.00;
+
+       
+        System.out.println("informações do livro 1:");
+        livro1.exibirInfo();
+
+        System.out.println("informações do livro 2:");
+        livro2.exibirInfo();
+
+        
+        System.out.println("aplicando desconto de 10% no livro 1");
+        livro1.aplicarDesconto(10);
+
+        System.out.println("novo preço do livro 1:");
+        livro1.exibirInfo();
+
+        Cliente cliente1 = new Cliente();
+        cliente1.nome = "Caio Roberto";
+        cliente1.email = "caio@gmail.com";
+        cliente1.telefone = "(91) 99999-0000";
+
+    
+        System.out.println("informações do livro:");
+        livro1.exibirInfo();
+
+        System.out.println("informações do cliente:");
+        cliente1.exibirInfo();
+
+        
+        cliente1.comprarLivro(livro1.titulo);
+    }
+}
